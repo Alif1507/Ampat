@@ -22,9 +22,21 @@
 }
 
 @utility posisi-tengah {
-  @apply fixed z-50 inset-0 top-24 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  @apply fixed z-50 inset-0  left-1/2 transform -translate-x-1/2 -translate-y-1/2;
 }
 
 @utility background-kaca {
   @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 shadow-lg;
+}
+
+@utility text-head {
+  @apply font-playfair-display text-4xl font-medium;
+}
+
+@utility btn-peta {
+  @apply flex justify-center items-center gap-16 mt-6
+}
+
+@utility btn-peta-hover {
+  @apply hover:bg-[#05668D] hover:text-white hover:shadow-[#05668D] transition-all duration-100;
 }
