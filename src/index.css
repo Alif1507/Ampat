@@ -26,7 +26,7 @@
 }
 
 @utility background-kaca {
-  @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 shadow-lg;
+  @apply bg-black/30 backdrop-blur-md border border-white/20 rounded-xl p-6 shadow-lg;
 }
 
 @utility text-head {

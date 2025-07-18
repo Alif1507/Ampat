@@ -6,6 +6,8 @@ import { SplitText } from "gsap/SplitText";
 import Navbar from "./components/navbar";
 import Hero from "./components/Hero";
 import Peta from "./components/Peta";
+import Gambaran from "./components/Gambaran";
+import Penyebab from "./components/Penyebab";
 
 gsap.registerPlugin(useGSAP,ScrollTrigger,SplitText);
 
@@ -17,6 +19,8 @@ function App() {
       <Navbar />
       <Hero />
       <Peta />
+      <Gambaran />
+      <Penyebab />
     </main>
   )
 }

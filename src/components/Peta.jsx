@@ -158,7 +158,7 @@ const Peta = () => {
           <div className="btn-peta">
             <button
               onClick={() => toggleIzinTAmbang(5)}
-              className="font-inter text-lg w-[362px] h-[67px] rounded-xl bg-white shadow-lg btn-peta-hover"
+              className="font-inter text-lg w-[362px] h-[67px] rounded-xl bg-white shadow-lg btn-peta-hover banget"
             >
               {izinTambangList[4]}
             </button>
