@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import Peta from "./components/Peta";
 import Gambaran from "./components/Gambaran";
 import Penyebab from "./components/Penyebab";
+import Solusi from "./components/Solusi";
 
 gsap.registerPlugin(useGSAP,ScrollTrigger,SplitText);
 
@@ -21,6 +22,7 @@ function App() {
       <Peta />
       <Gambaran />
       <Penyebab />
+      <Solusi />
     </main>
   )
 }

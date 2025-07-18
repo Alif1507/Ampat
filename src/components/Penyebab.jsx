@@ -4,7 +4,7 @@ import { penyebab } from '../../constants'
 const Penyebab = () => {
   return (
     <section className='flex flex-col items-center mt-30'>
-      <h1 className='text-head'>Apa Penyebab masalah utama dari tambang di papua</h1>
+      <h1 className='text-head'>Apa Penyebab masalah utama dari tambang di papua?</h1>
 
       <div className='flex items-center gap-30 mt-24'>
           {penyebab.map((p) => (
