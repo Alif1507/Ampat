@@ -70,8 +70,55 @@ const penyebab = [
 
 ]
 
+const social = [
+  {
+    id: 1,
+    src: "/gambar/Frame 12.png"
+  },
+
+  {
+    id: 2,
+    src: "/gambar/Frame 13.png"
+  },
+
+  {
+    id: 3,
+    src: "/gambar/Frame 14.png"
+  },
+
+  {
+    id: 4,
+    src: "/gambar/Frame 15.png"
+  },
+  
+]
+
+const links = [
+  {
+    id: 1,
+    link: "Home"
+  },
+
+  {
+    id: 2,
+    link: "Information"
+  },
+
+  {
+    id: 3,
+    link: "About"
+  },
+
+  {
+    id: 4,
+    link: "Quiz"
+  },
+]
+
 export {
   gambar1,
   gambar2,
-  penyebab
+  penyebab,
+  social,
+  links
 }
