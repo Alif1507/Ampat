@@ -15,8 +15,6 @@
     "gsap": "^3.13.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "swiper": "^11.2.10",
-    "tailwind-scrollbar-hide": "^4.0.0",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {

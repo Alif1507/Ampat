@@ -9,6 +9,12 @@ import About from "./components/About";
 import Read from "./components/Read";
 import Isu from "./components/Isu";
 import Artikel from "./components/Artikel";
+import Peta from "./components/Peta";
+import Gambaran from "./components/Gambaran";
+import Penyebab from "./components/Penyebab";
+import Solusi from "./components/Solusi";
+import Footer from "./components/Footer";
+import CobaQuiz from "./components/CobaQuiz";
 
 gsap.registerPlugin(useGSAP,ScrollTrigger,SplitText);
 
@@ -20,9 +26,15 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <CobaQuiz />
       <Read />
       <Isu />
       <Artikel />
+      <Peta />
+      <Gambaran />
+      <Penyebab />
+      <Solusi />
+      <Footer />
     </main>
   )
 }
