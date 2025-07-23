@@ -9,8 +9,8 @@ const Isu = () => {
       </div>
 
       <div className='mx-14 flex justify-center gap-5'>
-        <div className='bg-[#F5F5DC] relative mt-10 w-[870px] hover:bg-[#ffffff] hover:shadow-2xl transition duration-300'>
-          <img className='absolute bottom-0 right-0' src="/gambar/daun.png" alt="" />
+        <div className='bg-[#F5F5DC] group relative mt-10 w-[870px] hover:bg-[#ffffff] hover:shadow-2xl transition duration-300'>
+          <img className='absolute bottom-0 right-0 group-hover:rotate-20 transition duration-300 ' src="/gambar/daun.png" alt="" />
           <img className='absolute top-0 left-0' src="/gambar/petik.png" alt="" />
           <h1 className='text-xl font-semibold text-shadow-lg py-5 ml-12'>Tambang Nikel Pada Ekosistem Laut</h1>
           <p className='ml-12 w-[760px]  mr-10'>Raja Ampat, surga laut dunia yang dikenal dengan kekayaan terumbu karang dan keanekaragaman hayati lautnya, kini menghadapi ancaman serius: ekspansi tambang nikel. Aktivitas tambang telah menyebabkan deforestasi lebih dari 500 hektar hutan dan mencemari laut dengan sedimentasi, yang menutupi terumbu karang dan mengganggu kehidupan spesies laut penting seperti paus sperma dan kima raksasa.</p>

@@ -115,10 +115,65 @@ const links = [
   },
 ]
 
+
+ const questions = [
+    {
+      question: "Apa yang harus kita lakukan untuk membantu masalah yang ada di raja ampat saat ini?",
+      options: ["Menyebarkan fakta melalui sosmed", "Membantu doa saja", "Tidak peduli dengan hal itu karena bukan urusan kita", "Membiarkan saja karena tidak akan berdampak apa apa"],
+      answer: "0",
+    },
+    {
+      question: "Apa yang membuat Raja Ampat perlu dilindungi keindahan alamnya?",
+      options: ["Karena tempat bersejarah", "Karena tempat terbaik untuk berlibur", "karena menjadi salah satu wisata indah yang ada di Indonesia", "Karena tempat dimana bisa buat untuk berlibur"],
+      answer: "2",
+    },
+    {
+      question: "Manakah dari spesies berikut yang merupakan spesies endemik Raja Ampat?",
+      options: ["Dugong dugon", "Penyu belimbing", "Cendrawasih Merah (Paradisaea rubra)", "Hiu martil"],
+      answer: "2",
+    },
+    {
+      question: "Apa nama suku asli yang mendiami sebagian besar wilayah Raja Ampat?",
+      options: ["Dani", "Asmat", "Maya", "Sentani"],
+      answer: "2",
+    },
+    {
+      question: "Apa nama gugusan pulau kecil terkenal yang sering dijadikan ikon wisata Raja Ampat?",
+      options: ["Misool", "Batanta", "Salawati", "Wayag"],
+      answer: "3",
+    },
+    {
+      question: "Dari segi administrasi, Raja Ampat termasuk dalam provinsi mana?",
+      options: ["Papua Barat", "Papua Pegunungan", "Papua Tengah", "Papua Selatan"],
+      answer: "0",
+    },
+    {
+      question: "Raja Ampat terdiri dari empat pulau utama. Manakah yang bukan termasuk ke dalam empat pulau utama tersebut?",
+      options: ["Waigeo", "Biak", "Misool", "Salawati"],
+      answer: "1",
+    },
+    {
+      question: "Perusahaan tambang mana yang mendapat izin tambang nikel di Pulau Kawe, Raja Ampat, sebelum akhirnya ditolak?",
+      options: ["PT Anugerah Surya Pratama", " PT Antam Tbk", "PT Freeport Indonesia", "PT Vale Indonesia"],
+      answer: "0",
+    },
+    {
+      question: "Apa dampak ekologis utama dari pertambangan nikel di wilayah kepulauan seperti Raja Ampat?",
+      options: ["Longsor di lereng gunung", "Pencemaran air laut dan kerusakan terumbu karang", "Penurunan kualitas udara", "Perubahan iklim ekstrem"],
+      answer: "1",
+    },
+    {
+      question: "Dalam konteks keberlanjutan, apa alasan utama menolak tambang di kawasan Raja Ampat?",
+      options: ["Investasi tambang terlalu besar", "Harga nikel tidak stabil", "Tambang tidak menciptakan lapangan kerja", "Tambang mengganggu wisata berkelanjutan dan biodiversitas laut"],
+      answer: "3",
+    },
+  ];
+
 export {
   gambar1,
   gambar2,
   penyebab,
   social,
-  links
+  links,
+  questions
 }

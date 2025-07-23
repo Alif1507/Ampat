@@ -59,7 +59,7 @@ const Peta = () => {
             <div className="absolute left-0 top-0 h-full w-1 bg-blue-500"></div>
             <div className="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
             <div className="absolute -top-[5px] -right-1 w-4 h-4 bg-blue-500 rounded-full"></div>
-            <div className="text-white absolute left-20 -top-4 text-nowrap">
+            <div className="text-white absolute  left-20 -top-4 text-nowrap">
               <h1 className="text-white -top-4 font-inter">
                 PT.KAWEI SEJAHTERA MINING (IUP)
               </h1>
