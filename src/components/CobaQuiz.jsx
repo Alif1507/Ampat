@@ -8,7 +8,7 @@ const CobaQuiz = () => {
       <p className='font-inter text-3xl'>Jawab Pertanyaan Seputar Raja Ampat dari Kami</p>
       <a href="/quiz" className='absolute right-30 top-25 shadow-xl'><button className='text-[#03374C] text-3xl font-bold font-playfair-display w-[204px] h-[62px] rounded-xl bg-white'>Mulai Quiz</button></a>
 
-      <img className='absolute right-0 bottom-0' src="gambar/gambarQuiz.png" alt="Gambar Quiz" />
+      <img className='absolute right-0 bottom-0' src="gambar/gambarQuiz.png"  alt="Gambar Quiz" />
     </section>
   )
 }
