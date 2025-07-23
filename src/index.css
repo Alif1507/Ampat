@@ -4,17 +4,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
 
 @theme {
   --font-inter: 'Inter', sans-serif;
   --font-playfair-display: 'Playfair Display', serif;
   --font-lora: 'Lora', serif;
   --font-play : 'Play', sans-serif;
+  --font-school: "Schoolbell", cursive;
 }
 
 @utility nav-links {
   @apply text-[22px] font-inter font-normal text-white;
 }
+
+
 
 @utility hero-title {
   @apply font-playfair-display font-bold text-6xl;
@@ -46,4 +51,9 @@
 .oks {
   background-image: url("/gambar/Rectangle 45.png");
   background-size: cover;
+}
+
+.stroke-text {
+  -webkit-text-stroke: 2.5px #03374C;
+  color: white;
 }
