@@ -48,7 +48,7 @@ const QuizPage = () => {
   };
 
 
-  React.useEffect(() => {
+  useEffect(() => {
   if (introStep === 0) {
     setTimeout(() => setIntroStep(1), 2000);
   } else if (introStep === 1) {
