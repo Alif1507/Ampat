@@ -119,7 +119,7 @@ const Peta = () => {
       <h1 className="font-playfair-display text-2xl sm:text-4xl font-medium relative text-center mb-8 sm:mb-0">
         Peta izin tambang di Raja Ampat
         <img 
-          className="absolute -right-8 sm:-right-25 top-0 w-6 sm:w-auto" 
+          className="absolute -right-8 sm:-right-25 top-10 w-6 sm:w-auto" 
           src="/gambar/taliItem.png" 
           alt="" 
         />
