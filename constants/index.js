@@ -19,11 +19,52 @@ const gambar1 = [
     src: "/gambar/image-3.png"
   },
 
+  {
+    id: 1,
+    src: "/gambar/image.png"
+  },
+
+  {
+    id: 2,
+    src: "/gambar/image-1.png"
+  },
+
+  {
+    id: 3,
+    src: "/gambar/image-2.png"
+  },
+
+  {
+    id: 4,
+    src: "/gambar/image-3.png"
+  },
+
+
   
 
 ]
 
 const gambar2 = [
+  {
+    id: 1,
+    src: "/gambar/image-4.png"
+  },
+
+  {
+    id: 2,
+    src: "/gambar/image-5.png"
+  },
+
+  {
+    id: 3,
+    src: "/gambar/image-6.png"
+  },
+
+  {
+    id: 4,
+    src: "/gambar/image-7.png"
+  },
+
   {
     id: 1,
     src: "/gambar/image-4.png"

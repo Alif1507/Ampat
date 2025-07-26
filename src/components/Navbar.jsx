@@ -34,7 +34,7 @@ const Navbar = () => {
 
   })
   return (
-    <nav className="h-20 w-screen top-9 flex flex-row justify-around items-center border border-white text-white posisi-tengah background-kaca">
+    <nav className="h-20 w-screen top-9 flex flex-row justify-around items-center border border-white text-white posisi-tengah background-kaca max-md:hidden">
       <div className="flex items-center gap-3"><img className="h-[60px] w-auto" src="/gambar/LOGO.png" alt="logo ampat" /> <h1 className="text-[18px] font-playfair-display nav-text">AMPAT</h1></div>
       <ul className="flex gap-8">
         <li className="nav-links"><a href="">Home</a></li>

@@ -12,8 +12,8 @@ const About = () => {
             
         </div>
 
-        <div className='mx-30 mt-20 flex items-center'>
-           <div className="relative w-[540px] h-[380px]  mt-8">
+        <div className='mx-30 max-md:mx-6 mt-20 flex items-center max-md:flex max-md:flex-col max-md:gap-30'>
+           <div className="relative w-[340px] h-[380px]  mt-8">
                 <div 
                 className={`transition-all duration-1000 ${isFirstBig ? "w-[540px] z-10" : "cursor-pointer absolute bottom-[-10px] left-[-50px] z-20 w-[270px]"}`}
                 onClick={() => setIsFirstBig(true)}
@@ -21,7 +21,7 @@ const About = () => {
                     <img
                         src="/gambar/gbBesar.png"
                         alt="Gambar Besar"
-                        className=" w-full h-auto rounded-xl object-cover"
+                        className=" w-100 h-auto rounded-xl object-cover"
                     />
                 </div>
 
@@ -33,12 +33,12 @@ const About = () => {
                     <img
                         src="/gambar/gbKecil.png"
                         alt="Gambar Kecil"
-                        className=" w-full h-auto rounded-xl object-cover"
+                        className=" w-100 h-auto rounded-xl object-cover"
                     />
                 </div>
             </div>
 
-            <div className='text-2xl text-left max-w-[900px] ml-20 '>
+            <div className='text-2xl text-left  ml-20 max-md:ml-0 max-md:text-center'>
                 <p>Ampat adalah website jurnal mengenai salah satu wisata pulau terindah di indonesia yaitu  <span className='font-bold'>RAJA AMPAT</span>,disini kamu dapat mengetahui fakta dan hal menarik seputar raja ampat tentunya dengan animasi dan tampilan yang menarik ,membuat kalian dapat mencerna informasi dan menambah edukasi dengan nyaman</p>
             </div>
 

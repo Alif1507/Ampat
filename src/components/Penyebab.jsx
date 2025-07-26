@@ -4,9 +4,9 @@ import { penyebab } from '../../constants'
 const Penyebab = () => {
   return (
     <section className='flex flex-col items-center mt-30'>
-      <h1 className='text-head'>Apa Penyebab masalah utama dari tambang di papua?</h1>
+      <h1 className='text-head max-md:text-center'>Apa Penyebab masalah utama dari tambang di papua?</h1>
 
-      <div className='flex items-center gap-30 mt-24'>
+      <div className='flex max-md:flex-col items-center gap-30 mt-24'>
           {penyebab.map((p) => (
         <div key={p.id} className='w-[332px] h-[355px] rounded-lg bg-white shadow-lg p-8 flex flex-col items-center relative'>
          

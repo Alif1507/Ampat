@@ -15,13 +15,15 @@ import Penyebab from "./components/Penyebab";
 import Solusi from "./components/Solusi";
 import Footer from "./components/Footer";
 import CobaQuiz from "./components/CobaQuiz";
+import Sidebar from "./components/Sidebar";
 
 gsap.registerPlugin(useGSAP,ScrollTrigger,SplitText);
 
 const Landing = () => {
   return (
-    <main className="h-[8888px] bg-[#F5F5DC] relative">
+    <main className=" bg-[#F5F5DC] relative">
       <Navbar />
+      <Sidebar />
       <Hero />
       <About />
       <CobaQuiz />

@@ -111,8 +111,8 @@ const QuizPage = () => {
         <img className='z-20 relative' src="/gambar/exit.png" alt="" />
       </button>
 
-        <img className='absolute top-[46%] left-1/2 transform -translate-x-1/2 -translate-y-[64%]' src="/gambar/papantulis.png" alt="" />
-        <img className='absolute right-[22%] top-19' src="/gambar/monyet.png" alt="" />
+        <img className='absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-[64%]' src="/gambar/papantulis.png" alt="" />
+        <img className='absolute right-[22%] top-10 hidden' src="/gambar/monyet.png" alt="" />
         <img className='absolute bottom-0 w-full' src="/gambar/ombak.png" alt="" />
         <img className='absolute top-0 left-0' src="/gambar/bintik.png" alt="" />
         <img className='absolute top-60 left-0' src="/gambar/bintik.png" alt="" />
@@ -121,16 +121,21 @@ const QuizPage = () => {
         <img className='absolute top-60 right-0' src="/gambar/bintik.png" alt="" />
         <img className='absolute top-90 right-0' src="/gambar/bintik.png" alt="" />
 
-        <h1 style={{ fontFamily: "Schoolbell" }} className='absolute top-[32%] font-school left-1/2 transform -translate-x-1/2 text-white text-4xl text-center w-[600px] px-8 '>{currentQuestion.question}</h1>
+        <h1 style={{ fontFamily: "Schoolbell" }} className='absolute max-md:text-xl max-md:w-100 top-[30%] font-school left-1/2 transform -translate-x-1/2 text-white text-4xl text-center w-[600px] px-8 '>{currentQuestion.question}</h1>
 
-        <div className='absolute bottom-10 left-1/2 transform -translate-x-1/2 grid grid-cols-2 gap-6 w-[1200px] h-[190px] px-8 justify-center'>
-          {currentQuestion.options.map((option, idx) => (
-            <button key={idx} onClick={() => handleAnswer(idx)} className='bg-white cursor-pointer relative text-left p-4 rounded-xl text-[#03374C] hover:bg-blue-100 text-lg font-semibold items-center'>
-               <span className="font-bold mr-2 text-3xl text-[#03374C]">{String.fromCharCode(65 + idx)}.</span> {option}
-               <img className='absolute -left-5 -top-5 z-0 ' src="/gambar/bintang.png" alt="" />
-            </button>
-          ))}
-        </div>
+        <div className='absolute bottom-4 sm:bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 w-[95%] sm:w-[90%] md:w-[1200px] max-w-6xl px-4 sm:px-6 md:px-8 justify-center'>
+        {currentQuestion.options.map((option, idx) => (
+          <button 
+            key={idx} 
+            onClick={() => handleAnswer(idx)} 
+            className='bg-white cursor-pointer relative text-left p-3 sm:p-4 rounded-xl text-[#03374C] hover:bg-blue-100 text-sm sm:text-base md:text-lg font-semibold items-center min-h-[60px] sm:min-h-[70px] md:min-h-[80px]'
+          >
+             <span className="font-bold mr-2 text-xl sm:text-2xl md:text-3xl text-[#03374C]">{String.fromCharCode(65 + idx)}.</span> 
+             <span className="break-words">{option}</span>
+             <img className='absolute -left-2 sm:-left-3 md:-left-5 -top-2 sm:-top-3 md:-top-5 z-0 w-4 sm:w-5 md:w-auto' src="/gambar/bintang.png" alt="" />
+          </button>
+        ))}
+      </div>
 
         {showTransition && (
         <div className="fixed inset-0 z-50 backdrop-blur-[20px] bg-black/10 flex items-center justify-center">

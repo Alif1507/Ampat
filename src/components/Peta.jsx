@@ -3,23 +3,59 @@ import gsap from "gsap";
 import React, { useState } from "react";
 
 const Peta = () => {
-  const [selectedIzinTambang, setSelectedIzinTambang] = useState(0);
+  const [selectedIzinTambang, setSelectedIzinTambang] = useState(null);
 
-  const berapaIzinTambang = 6;
-
-  const toggleIzinTAmbang = (index) => {
-    const newIndex = (index + berapaIzinTambang) % berapaIzinTambang;
-
-    setSelectedIzinTambang(newIndex);
-    console.log(newIndex);
+  const toggleIzinTambang = (index) => {
+    // Toggle: if same index is clicked, hide it; otherwise show the new one
+    setSelectedIzinTambang(selectedIzinTambang === index ? null : index);
   };
 
-  const izinTambangList = [
-    "PT.KAWEI SEJAHTERA MINIG (IUP)",
-    "PT.ANUGERAH SURYA PRATAMA (IUP)",
-    "PT.GAG NIKEL (KK)",
-    "PT.MULIA RAYMOND PERKASA (IUP)",
-    "PT.NURHAM (IUP)",
+  const izinTambangData = [
+    {
+      name: "PT.KAWEI SEJAHTERA MINING (IUP)",
+      komoditas: "Biji Nickel",
+      luas: "5.922 Hektare",
+      kegiatan: "Operasi Produksi",
+      position: "top-0 left-10 sm:top-18 sm:left-27",
+      lineType: "corner", // L-shaped line
+      textPosition: "left-7 top-3 sm:left-20 sm:-top-4"
+    },
+    {
+      name: "PT.ANUGERAH SURYA  PRATAMA (IUP)",
+      komoditas: "Nickel",
+      luas: "1.173 Hektare",
+      kegiatan: "Operasi Produksi",
+      position: "top-8 right-20 sm:top-21 sm:right-63",
+      lineType: "horizontal", // horizontal line
+      textPosition: "-left-30 top-5 sm:left-14 sm:top-5"
+    },
+    {
+      name: "PT.GAG NIKEL (KK)",
+      komoditas: "Nickel",
+      luas: "13.136 Hektare",
+      kegiatan: "Operasi Produksi",
+      position: "top-35 left-7 sm:top-88 sm:left-18",
+      lineType: "horizontal",
+      textPosition: "left-20 -top-4 sm:left-30 sm:-top-4"
+    },
+    {
+      name: "PT.MULIA RAYMOND PERKASA (IUP)",
+      komoditas: "Nickel",
+      luas: "2.193 Hektare",
+      kegiatan: "Operasi Produksi",
+      position: "top-15 left-14 sm:top-53 sm:left-38",
+      lineType: "corner",
+      textPosition: "left-16 -top-4 sm:left-20 sm:-top-4"
+    },
+    {
+      name: "PT.NURHAM (IUP)",
+      komoditas: "Nikel",
+      luas: "3.000 Hektare",
+      kegiatan: "Operasi Produksi",
+      position: "top-27 right-8 sm:top-70 sm:right-36",
+      lineType: "horizontal",
+      textPosition: "-left-15 top-4 sm:left-8 sm:top-6"
+    }
   ];
 
   useGSAP(() => {
@@ -29,7 +65,7 @@ const Peta = () => {
       ease: "power2.in",
     });
 
-    // Animate the blue line when selectedIzinTambang changes
+    // Animate the line when selectedIzinTambang changes
     if (selectedIzinTambang !== null) {
       gsap.fromTo(
         `.line-anim-${selectedIzinTambang}`,
@@ -39,128 +75,107 @@ const Peta = () => {
     }
   }, [selectedIzinTambang]);
 
+  const renderLine = (data, index) => {
+    if (selectedIzinTambang !== index) return null;
+
+    const baseClasses = `absolute line-anim-${index}`;
+    
+    if (data.lineType === "corner") {
+      return (
+        <div className={`${baseClasses} ${data.position} w-12 h-12 sm:w-[70px] sm:h-[70px]`}>
+          <div className="absolute left-0 top-0 h-full w-1 bg-blue-500"></div>
+          <div className="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
+          <div className="absolute -top-[5px] -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded-full"></div>
+          <div className={`text-white absolute text-nowrap ${data.textPosition}`}>
+            <h1 className="text-white font-inter text-xs sm:text-base font-semibold">
+              {data.name}
+            </h1>
+            <p className="font-extralight text-xs sm:text-sm">Komoditas: {data.komoditas}</p>
+            <p className="font-extralight text-xs sm:text-sm">Luas: {data.luas}</p>
+            <p className="font-extralight text-xs sm:text-sm">Kegiatan: {data.kegiatan}</p>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className={`${baseClasses} ${data.position} w-16 sm:w-[100px] h-1`}>
+          <div className="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
+          <div className="absolute -top-[5px] -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded-full"></div>
+          <div className={`text-white absolute text-nowrap ${data.textPosition}`}>
+            <h1 className="text-white font-inter text-xs sm:text-base font-semibold">
+              {data.name}
+            </h1>
+            <p className="font-extralight text-xs sm:text-sm">Komoditas: {data.komoditas}</p>
+            <p className="font-extralight text-xs sm:text-sm">Luas: {data.luas}</p>
+            <p className="font-extralight text-xs sm:text-sm">Kegiatan: {data.kegiatan}</p>
+          </div>
+        </div>
+      );
+    }
+  };
+
   return (
-    <section className="z-20 relative justify-center items-center flex flex-col mt-64">
-      <h1 className="font-playfair-display text-4xl font-medium">
+    <section className="z-20 relative justify-center items-center flex flex-col mt-32 sm:mt-64 px-4">
+      <h1 className="font-playfair-display text-2xl sm:text-4xl font-medium relative text-center mb-8 sm:mb-0">
         Peta izin tambang di Raja Ampat
+        <img 
+          className="absolute -right-8 sm:-right-25 top-0 w-6 sm:w-auto" 
+          src="/gambar/taliItem.png" 
+          alt="" 
+        />
       </h1>
-      <div className="mt-29 relative">
-        <img src="/gambar/peta.png" alt="Peta" />
-        {/* Show lines only if a button has been clicked */}
-        {selectedIzinTambang !== null && selectedIzinTambang === 0 && (
-          <div className="absolute w-[70px] h-[70px] top-18 left-27 hidden">
-            <div className="absolute left-0 top-0 h-full w-1 bg-blue-500"></div>
-            <div className="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
-            <div className="absolute -top-[5px] -right-1 w-4 h-4 bg-blue-500 rounded-full"></div>
+      
+      <div className="mt-8 sm:mt-29 relative w-full max-w-4xl">
+        {/* Map container with responsive sizing */}
+        <div className="relative w-full">
+          <img 
+            src="/gambar/peta.png" 
+            alt="Peta" 
+            className="w-full h-auto max-w-full"
+          />
+          
+          {/* Cloud decorations - hidden on mobile for cleaner look */}
+          <img 
+            className="absolute -right-20 sm:-right-40 -top-25 sm:-top-50 w-16 sm:w-auto hidden sm:block" 
+            src="/gambar/awanPeta.png" 
+            alt="" 
+          />
+          <img 
+            className="absolute -left-20 sm:-left-50 -top-25 sm:-top-50 w-16 sm:w-auto hidden sm:block" 
+            src="/gambar/awanPeta.png" 
+            alt="" 
+          />
+          
+          {/* Dynamic lines and info boxes */}
+          {izinTambangData.map((data, index) => renderLine(data, index))}
+        </div>
+        
+        {/* Buttons section - responsive grid */}
+        <div className="mt-8 sm:mt-12 flex flex-col items-center gap-3 sm:gap-5">
+          {/* Mobile: Single column, Desktop: Two columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full max-w-2xl">
+            {izinTambangData.slice(0, 4).map((data, index) => (
+              <button
+                key={index}
+                onClick={() => toggleIzinTambang(index)}
+                className={`font-inter text-sm sm:text-lg w-full h-16 sm:h-[67px] rounded-xl bg-white shadow-lg btn-peta-hover transition-all duration-200 hover:shadow-xl hover:scale-105 px-4 ${
+                  selectedIzinTambang === index ? 'ring-2 ring-blue-500 bg-blue-50' : ''
+                }`}
+              >
+                {data.name}
+              </button>
+            ))}
           </div>
-        )}
-        {selectedIzinTambang !== null && selectedIzinTambang === 1 && (
-          <div className="absolute w-[70px] h-[70px] top-18 left-27 line-anim-1">
-            <div className="absolute left-0 top-0 h-full w-1 bg-blue-500"></div>
-            <div className="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
-            <div className="absolute -top-[5px] -right-1 w-4 h-4 bg-blue-500 rounded-full"></div>
-            <div className="text-white absolute  left-20 -top-4 text-nowrap">
-              <h1 className="text-white -top-4 font-inter">
-                PT.KAWEI SEJAHTERA MINING (IUP)
-              </h1>
-              <p className="font-extralight">Komoditas : Biji Nickel</p>
-              <p className="font-extralight">Luas : 5.922 Hektare</p>
-              <p className="font-extralight">Kegiatan : Operasi Produksi</p>
-            </div>
-          </div>
-        )}
-        {selectedIzinTambang !== null && selectedIzinTambang === 2 && (
-          <div className="absolute w-[100px] h-1 top-21 right-72 line-anim-2">
-            <div className="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
-            <div className="absolute -top-[5px] -right-1 w-4 h-4 bg-blue-500 rounded-full"></div>
-            <div className="text-white absolute left-14 top-5 text-nowrap">
-              <h1 className="text-white -top-4 font-inter">
-                PT.ANUGERAH SURYA PRATAMA (IUP)
-              </h1>
-              <p className="font-extralight">Komoditas : Nickel</p>
-              <p className="font-extralight">Luas : 1.173 Hektare</p>
-              <p className="font-extralight">Kegiatan : Operasi Produksi</p>
-            </div>
-          </div>
-        )}
-        {selectedIzinTambang !== null && selectedIzinTambang === 3 && (
-          <div className="absolute w-[100px] h-1 top-94 left-18 line-anim-3">
-            <div className="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
-            <div className="absolute -top-[5px] -right-1 w-4 h-4 bg-blue-500 rounded-full"></div>
-            <div className="text-white absolute left-30 -top-4 text-nowrap">
-              <h1 className="text-white -top-4 font-inter">
-                PT.GAG NIKEL (KK)
-              </h1>
-              <p className="font-extralight">Komoditas : Nickel</p>
-              <p className="font-extralight">Luas : 13.136 Hektare</p>
-              <p className="font-extralight">Kegiatan : Operasi Produksi</p>
-            </div>
-          </div>
-        )}
-        {selectedIzinTambang !== null && selectedIzinTambang === 4 && (
-          <div className="absolute w-[70px] h-[70px] top-60 left-40 line-anim-4">
-            <div className="absolute left-0 top-0 h-full w-1 bg-blue-500"></div>
-            <div className="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
-            <div className="absolute -top-[5px] -right-1 w-4 h-4 bg-blue-500 rounded-full"></div>
-            <div className="text-white absolute left-20 -top-4 text-nowrap">
-              <h1 className="text-white -top-4 font-inter">
-                PT.MULIA RAYMOND PERKASA(IUP)
-              </h1>
-              <p className="font-extralight">Komoditas : Nickel</p>
-              <p className="font-extralight">Luas          : 2.193 Hektare</p>
-              <p className="font-extralight">Kegiatan    : Operasi Produksi</p>
-            </div>
-          </div>
-        )}
-        {selectedIzinTambang !== null && selectedIzinTambang === 5 && (
-          <div className="absolute w-[100px] h-1 top-75 right-40 line-anim-5">
-            <div className="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
-            <div className="absolute -top-[5px] -right-1 w-4 h-4 bg-blue-500 rounded-full"></div>
-            <div className="text-white absolute left-8 top-6 text-nowrap">
-              <h1 className="text-white -top-4 font-inter">
-                PT.NURHAM (IUP)
-              </h1>
-              <p className="font-extralight">Komoditas : Nikel</p>
-              <p className="font-extralight">Luas          : 3.000 Hektare</p>
-              <p className="font-extralight">Kegiatan : Operasi Produksi</p>
-            </div>
-          </div>
-        )}
-        <div className="flex flex-col gap-5">
-          <div className="btn-peta">
+          
+          {/* Last button - full width on mobile, centered on desktop */}
+          <div className="w-full max-w-2xl">
             <button
-              onClick={() => toggleIzinTAmbang(1)}
-              className="font-inter text-lg w-[362px] h-[67px] rounded-xl bg-white shadow-lg btn-peta-hover"
+              onClick={() => toggleIzinTambang(4)}
+              className={`font-inter text-sm sm:text-lg w-full sm:w-96 h-16 sm:h-[67px] rounded-xl bg-white shadow-lg btn-peta-hover transition-all duration-200 hover:shadow-xl hover:scale-105 px-4 mx-auto block ${
+                selectedIzinTambang === 4 ? 'ring-2 ring-blue-500 bg-blue-50' : ''
+              }`}
             >
-              {izinTambangList[0]}
-            </button>
-            <button
-              onClick={() => toggleIzinTAmbang(2)}
-              className="font-inter text-lg w-[362px] h-[67px] rounded-xl bg-white shadow-lg btn-peta-hover"
-            >
-              {izinTambangList[1]}
-            </button>
-          </div>
-          <div className="btn-peta">
-            <button
-              onClick={() => toggleIzinTAmbang(3)}
-              className="font-inter text-lg w-[362px] h-[67px] rounded-xl bg-white shadow-lg btn-peta-hover"
-            >
-              {izinTambangList[2]}
-            </button>
-            <button
-              onClick={() => toggleIzinTAmbang(4)}
-              className="font-inter text-lg w-[362px] h-[67px] rounded-xl bg-white shadow-lg btn-peta-hover"
-            >
-              {izinTambangList[3]}
-            </button>
-          </div>
-          <div className="btn-peta">
-            <button
-              onClick={() => toggleIzinTAmbang(5)}
-              className="font-inter text-lg w-[362px] h-[67px] rounded-xl bg-white shadow-lg btn-peta-hover banget"
-            >
-              {izinTambangList[4]}
+              {izinTambangData[4].name}
             </button>
           </div>
         </div>
