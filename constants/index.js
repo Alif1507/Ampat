@@ -210,11 +210,36 @@ const links = [
     },
   ];
 
+  const dataSolusi = [
+    {
+      id: 1,
+      judul: "Sebarkan Informasi",
+      parag: "Edukasi orang lain tentang pentingnya menjaga Raja Ampat dengan berbagi artikel, infografis, atau video testimoni.",
+      img : "laptop.png"
+    },
+
+    {
+      id: 2,
+      judul: "Dukung Wisata Ramah Lingkungan",
+      parag: "Pilih dan promosikan pariwisata berkelanjutan yang melibatkan masyarakat lokal dan menjaga ekosistem.",
+      img : "petaSolu.png"
+    },
+
+    {
+      id: 3,
+      judul: "Tekan Pemerintah dan Perusahaan",
+      parag: "Suarakan pendapat melalui media sosial atau kanal resmi agar kebijakan berpihak pada lingkungan dan masyarakat adat.",
+      img : "camCrew.png"
+    },
+
+  ]
+
 export {
   gambar1,
   gambar2,
   penyebab,
   social,
   links,
-  questions
+  questions,
+  dataSolusi
 }

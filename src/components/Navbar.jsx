@@ -37,10 +37,10 @@ const Navbar = () => {
     <nav className="h-20 w-screen top-9 flex flex-row justify-around items-center border border-white text-white posisi-tengah background-kaca max-md:hidden">
       <div className="flex items-center gap-3"><img className="h-[60px] w-auto" src="/gambar/LOGO.png" alt="logo ampat" /> <h1 className="text-[18px] font-playfair-display nav-text">AMPAT</h1></div>
       <ul className="flex gap-8">
-        <li className="nav-links"><a href="">Home</a></li>
-        <li className="nav-links"><a href="">About</a></li>
-        <li className="nav-links"><a href="">Information</a></li>
-        <li className="nav-links"><a href="">Quiz</a></li>
+        <li className="nav-links"><a href="#home">Home</a></li>
+        <li className="nav-links"><a href="#about">About</a></li>
+        <li className="nav-links"><a href="#read">Information</a></li>
+        <li className="nav-links"><a href="#quiz">Quiz</a></li>
       </ul>
     </nav>
   )

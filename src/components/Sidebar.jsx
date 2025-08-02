@@ -31,7 +31,7 @@ const Sidebar = () => {
         </svg>
       </button>
 
-      <div className={`absolute right-0 flex justify-center w-64 h-screen transform transition-all duration-500  ${sidebar ? "translate-x-0" : "translate-x-full"}`}>
+      <div className={`absolute left-0 flex justify-center w-64 h-screen transform transition-all duration-500  ${sidebar ? "translate-x-0" : "-translate-x-full"}`}>
         {/* Background with opacity */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-blue-300 to-cyan-200 pointer-events-none"></div>
         {/* Content above background */}
@@ -55,7 +55,7 @@ const Sidebar = () => {
           </svg>
         </button>
 
-          <ul className="flex flex-col justify-center items-end gap-8 z-10 pr-10">
+          <ul className="flex flex-col justify-center items-start gap-8 z-10 pr-10">
             <li className="nav-links">
               <a className="bg-white/80 p-2 rounded-2xl text-blue-500 drop-shadow-xl hover:bg-blue-100" href="">Home</a>
             </li>

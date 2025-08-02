@@ -37,10 +37,6 @@ const Solusi = () => {
 
   return (
     <section className="flex flex-col items-center mt-16 md:mt-30 px-4 md:px-0">
-      {/* Responsive button */}
-      <button className="bg-white rounded-xl shadow-lg w-[180px] md:w-[204px] h-[56px] md:h-[62px] px-4 md:px-6 py-3 md:py-4 text-head flex items-center justify-center font-bold text-sm md:text-base">
-        Solusi
-      </button>
 
       <div className="mt-12 md:mt-24 w-full max-w-[1120px]">
         {/* Responsive image */}

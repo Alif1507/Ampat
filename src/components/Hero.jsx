@@ -34,7 +34,7 @@ function Hero() {
   
 
   return (
-    <section className="relative flex flex-col md:flex-row text-center md:text-start">
+    <section className="relative flex flex-col md:flex-row text-center md:text-start" id='home'>
       <img
         className="absolute z-10 w-full h-full object-cover"
         src="/gambar/backroundHero.png"

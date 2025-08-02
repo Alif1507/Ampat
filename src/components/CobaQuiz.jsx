@@ -6,7 +6,7 @@ const CobaQuiz = () => {
   const navigate = useNavigate();
 
   return (
-    <section className='bg-[#68D4FF] w-screen h-[385px] flex flex-col mt-40 p-20 max-md:p-5 justify-around relative'>
+    <section className='bg-[#68D4FF] w-screen h-[385px] flex flex-col mt-40 p-20 max-md:p-5 justify-around relative' id='quiz'>
       <div className='flex justify-between'>
          <h1 className='font-playfair-display text-6xl max-md:text-5xl'>Ayo Coba <span className='text-[70px] max-md:text-6xl font-playfair-display font-bold bg-gradient-to-r from-[#03374C] to-[#0681B2] bg-clip-text text-transparent relative'>Quiz
         <img className='absolute -right-10 top-0' src="/gambar/quiz-kutip.png" alt="" />

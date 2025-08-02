@@ -2,7 +2,7 @@ import React from 'react'
 
 const Read = () => {
   return (
-    <div className=''>
+    <div className='' id='read'>
         <div className='flex flex-col justify-center items-center'>
             <h1 className='hero-title text-4xl pt-20 mb-1 font-medium'>Read</h1>
             <img src="/gambar/garis1.png" alt="" />

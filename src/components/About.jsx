@@ -5,7 +5,7 @@ const About = () => {
     const [isFirstBig, setIsFirstBig] = useState(true);
 
   return (
-    <div className='mt-42 text-center justify-center'>
+    <div className='mt-42 text-center justify-center' id='about'>
         <div className='flex flex-col justify-center items-center overflow-hidden'>
             <h1 className='hero-title text-4xl pt-20 mb-1 font-medium'>About</h1>
             <img src="/gambar/garis1.png" alt="" />
