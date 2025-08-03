@@ -14,12 +14,15 @@ const QuizPage = () => {
   const [showTransition, setShowTransition] = useState(false); 
   const [isFinished, setIsFinished] = useState(false);
   const [introStep, setIntroStep] = useState(0);
+  const [userAnswers, setUserAnswers] = useState([]);
 
 
   const handleAnswer = (index) => {
   setSelected(index);
 
   const isLastQuestion = current + 1 === questions.length;
+
+  setUserAnswers((prev) => [...prev, index]);
 
   if (index.toString() === questions[current].answer) {
     setScore((prev) => prev + 1);
@@ -157,7 +160,7 @@ const QuizPage = () => {
 
           <div className="flex gap-4">
             <button
-              onClick={() => navigate("/jawaban")}
+              onClick={() => navigate("/jawaban", { state: { userAnswers } })}
               className="bg-[#68D4FF] hover:bg-sky-500  text-lg cursor-pointer text-black px-6 py-2 rounded-lg shadow-md"
             >
               Lihat Jawaban
