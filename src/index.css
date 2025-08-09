@@ -57,3 +57,7 @@
   -webkit-text-stroke: 2.5px #03374C;
   color: white;
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -35,12 +35,12 @@ const Penyebab = () => {
         {puter ? 'Solusi untuk masalah tambang di Papua' : 'Apa Penyebab masalah utama dari tambang di papua?'}
       </motion.h1>
       
-      <div className='flex max-md:flex-col items-center gap-30 mt-24 relative' style={{ perspective: '1000px' }}>
+      <div className='flex flex-col md:flex-col lg:flex-col items-center gap-30 mt-24 relative' style={{ perspective: '1000px' }}>
         <AnimatePresence mode="wait">
           {!puter ? (
             <motion.div
               key="penyebab"
-              className='flex max-md:flex-col items-center gap-30'
+              className='flex flex-col xl:flex xl:flex-row items-center gap-30'
               variants={cardVariants}
               initial="initial"
               animate="enter"
@@ -68,7 +68,7 @@ const Penyebab = () => {
           ) : (
             <motion.div
               key="solusi"
-              className='flex max-md:flex-col items-center gap-30'
+              className='flex flex-col lg:flex lg:flex-row items-center gap-30'
               variants={cardVariants}
               initial="initial"
               animate="enter"

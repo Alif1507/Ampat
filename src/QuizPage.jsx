@@ -126,7 +126,7 @@ const QuizPage = () => {
 
         <h1 style={{ fontFamily: "Schoolbell" }} className='absolute max-md:text-xl max-md:w-100 top-[30%] font-school left-1/2 transform -translate-x-1/2 text-white text-4xl text-center w-[600px] px-8 '>{currentQuestion.question}</h1>
 
-        <div className='absolute bottom-4 sm:bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 w-[95%] sm:w-[90%] md:w-[1200px] max-w-6xl px-4 sm:px-6 md:px-8 justify-center'>
+        <div className='absolute bottom-4 md:w-[770px] lg:w-[1020px] xl:w-[1200px]  sm:bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 w-[95%] sm:w-[90%]  max-w-6xl px-4 sm:px-6 md:px-8 justify-center'>
         {currentQuestion.options.map((option, idx) => (
           <button 
             key={idx} 
@@ -150,13 +150,13 @@ const QuizPage = () => {
 
       {isFinished && (
         <div className=" h-screen  inset-0 z-30 backdrop-blur-[20px] bg-black/10 relative flex flex-col items-center justify-center text-center">
-          <h1 className="text-7xl font-extrabold text-white mb-2 stroke-text">Skor Mu</h1>
-          <h2 className="text-6xl font-extrabold text-white mb-6 stroke-text">{score}/10</h2>
+          <h1 className="text-6xl lg:text-7xl font-extrabold text-white mb-2 stroke-text ">Skor Mu</h1>
+          <h2 className="text-5xl lg:text-6xl font-extrabold text-white mb-6 stroke-text">{score}/10</h2>
 
-            <img className='absolute top-0 left-0' src="/gambar/suprise-kiri.png" alt="" />
-            <img className='absolute top-0 right-0' src="/gambar/suprise-kanan.png" alt="" />
-            <img className='absolute bottom-0 left-0' src="/gambar/petasan-kiri.png" alt="" />
-            <img className='absolute bottom-0 right-0' src="/gambar/petasan-kanan.png" alt="" />
+            <img className='absolute top-0 left-0 w-[200px] lg:w-[350px]' src="/gambar/suprise-kiri.png" alt="" />
+            <img className='absolute top-0 right-0 w-[200px] lg:w-[350px]' src="/gambar/suprise-kanan.png" alt="" />
+            <img className='absolute bottom-0 left-0 w-[200px] lg:w-[350px]' src="/gambar/petasan-kiri.png" alt="" />
+            <img className='absolute bottom-0 right-0 w-[200px] lg:w-[350px]' src="/gambar/petasan-kanan.png" alt="" />
 
           <div className="flex gap-4">
             <button

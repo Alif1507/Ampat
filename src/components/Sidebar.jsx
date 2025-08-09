@@ -55,18 +55,18 @@ const Sidebar = () => {
           </svg>
         </button>
 
-          <ul className="flex flex-col justify-center items-start gap-8 z-10 pr-10">
+          <ul className="flex flex-col justify-center items-start gap-8 z-10 pr-10 scroll-smooth">
             <li className="nav-links">
-              <a className="bg-white/80 p-2 rounded-2xl text-blue-500 drop-shadow-xl hover:bg-blue-100" href="">Home</a>
+              <a className="bg-white/80 p-2 rounded-xl text-blue-500 drop-shadow-xl hover:bg-blue-100" href="#home">Home</a>
             </li>
             <li className="nav-links">
-              <a className="bg-white/80 p-2 rounded-2xl text-blue-500 drop-shadow-xl hover:bg-blue-100" href="">About</a>
+              <a className="bg-white/80 p-2 rounded-xl text-blue-500 drop-shadow-xl hover:bg-blue-100" href="#about">About</a>
             </li>
             <li className="nav-links">
-              <a className="bg-white/80 p-2 rounded-2xl text-blue-500 drop-shadow-xl hover:bg-blue-100" href="">Information</a>
+              <a className="bg-white/80 p-2 rounded-xl text-blue-500 drop-shadow-xl hover:bg-blue-100" href="#read">Information</a>
             </li>
             <li className="nav-links">
-              <a className="bg-white/80 p-2 rounded-2xl text-blue-500 drop-shadow-xl hover:bg-blue-100" href="/quiz">Quiz</a>
+              <a className="bg-white/80 p-2 rounded-xl text-blue-500 drop-shadow-xl hover:bg-blue-100" href="#quiz">Quiz</a>
             </li>
           </ul>
         </div>

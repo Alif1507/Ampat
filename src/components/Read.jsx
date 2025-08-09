@@ -15,32 +15,48 @@ const Read = () => {
         </div>
        
         {/* desktop */}
-        <div className='flex justify-center items-center gap-20 mt-10 max-md:hidden'>
-            <div className='relative transition-all hover:rotate-8 duration-500'>
-                <img className='object-cover' src="/gambar/gambar-kiri.png" alt="" />
-                <div className='absolute bottom-0 ml-1 w-[286px] h-40 mb-1 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-6 py-5 text-white rounded-b-xl '>
-                    <h1 className='text-xl font-semibold'>About Papua</h1>
-                    <p className='text-sm mt-1 font-light'>Jelajahi Papua lebih dalam banyak hal yang menarik, baca sekarang</p>
-                    <button className='mt-4 bg-[#05668D] py-1 px-2 text-[13px]  rounded-xl'>Baca Sekarang</button>
-                </div>
-            </div>
-            <div className='relative transition-all hover:rotate-8 duration-500'>
-                <img className='object-cover' src="/gambar/gambar-tengah.png" alt="" />
-                <div className='absolute bottom-0 ml-1 w-[367px] h-52 mb-1 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-6 py-5 text-white rounded-b-2xl items-center'>
-                    <h1 className='text-xl font-semibold'>Whats Make Raja Ampat Special</h1>
-                    <p className='text-sm mt-1 font-light'>Penasaran Apa yang membuat raja Ampat begitu special? baca sekarang</p>
-                    <button className='mt-4 bg-[#05668D] py-1 px-2 text-[13px]  rounded-xl'>Baca Sekarang</button>
-                </div>
-            </div>
-            <div className='relative transition-all hover:rotate-8 duration-500'>
-                <img className='object-cover' src="/gambar/gambar-kanan.png" alt="" />
-                <div className='absolute bottom-0 ml-1 w-[286px] h-40 mb-1 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-6 py-5 text-white rounded-b-xl'>
-                    <h1 className='text-xl font-semibold'>Destination In Papua</h1>
-                    <p className='text-sm mt-1 font-light'>Papua Memiliki banyak destinasi yang memukai, baca sekarang</p>
-                    <button className='mt-4 bg-[#05668D] py-1 px-2 text-[13px] rounded-xl'>Baca Sekarang</button>
-                </div>
+       <div className="flex justify-center items-center gap-10 lg:gap-20 mt-10 max-md:hidden">
+        <div className="relative transition-all hover:rotate-8 duration-500 max-w-[286px] w-full">
+            <img className="object-cover w-full rounded-xl" src="/gambar/gambar-kiri.png" alt="" />
+            <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-4 py-4 text-white rounded-b-xl">
+            <h1 className="text-base md:text-lg lg:text-xl font-semibold">About Papua</h1>
+            <p className="text-xs md:text-sm lg:text-base mt-1 font-light">
+                Jelajahi Papua lebih dalam banyak hal yang menarik, baca sekarang
+            </p>
+            <button className="mt-3 bg-[#05668D] py-1 md:py-1.5 px-2 md:px-3 text-xs md:text-sm lg:text-base rounded-xl">
+                Baca Sekarang
+            </button>
             </div>
         </div>
+
+        <div className="relative transition-all hover:rotate-8 duration-500 max-w-[367px] w-full">
+            <img className="object-cover w-full rounded-2xl" src="/gambar/gambar-tengah.png" alt="" />
+            <div className="absolute bottom-0 w-full h-52 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-4 py-4 text-white rounded-b-2xl">
+            <h1 className="text-base md:text-lg lg:text-xl font-semibold">Whats Make Raja Ampat Special</h1>
+            <p className="text-xs md:text-sm lg:text-base mt-1 font-light">
+                Penasaran Apa yang membuat raja Ampat begitu special? baca sekarang
+            </p>
+            <button className="mt-3 bg-[#05668D] py-1 md:py-1.5 px-2 md:px-3 text-xs md:text-sm lg:text-base rounded-xl">
+                Baca Sekarang
+            </button>
+            </div>
+        </div>
+
+        <div className="relative transition-all hover:rotate-8 duration-500 max-w-[286px] w-full">
+            <img className="object-cover w-full rounded-xl" src="/gambar/gambar-kanan.png" alt="" />
+            <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-4 py-4 text-white rounded-b-xl">
+            <h1 className="text-base md:text-lg lg:text-xl font-semibold">Destination In Papua</h1>
+            <p className="text-xs md:text-sm lg:text-base mt-1 font-light">
+                Papua Memiliki banyak destinasi yang memukai, baca sekarang
+            </p>
+            <button className="mt-3 bg-[#05668D] py-1 md:py-1.5 px-2 md:px-3 text-xs md:text-sm lg:text-base rounded-xl">
+                Baca Sekarang
+            </button>
+            </div>
+        </div>
+        </div>
+
+
 
         {/* mobile */}
 

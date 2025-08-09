@@ -49,7 +49,7 @@ function Hero() {
             alt="Assethero1"
           />
         </h1>
-        <h1 className="hero-paragraf z-20 md:text-2xl leading-relaxed text-xl text-nowrap md:text-wrap">
+        <h1 className="hero-paragraf z-20 md:text-2xl text-center md:text-start  md:mx-0 leading-relaxed text-xl ">
           Raja Ampat bukan sekadar indah — ia <br className="hidden md:block" />
           punya cerita, suara, dan perjuangan yang <br className="hidden md:block" />
           harus didengar.

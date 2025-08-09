@@ -136,7 +136,7 @@ const Peta = () => {
           
           {/* Cloud decorations - hidden on mobile for cleaner look */}
           <img 
-            className="absolute -right-20 sm:-right-40 -top-25 sm:-top-50 w-16 sm:w-auto hidden sm:block" 
+            className="absolute right-0 -top-50  sm:w-auto hidden sm:block" 
             src="/gambar/awanPeta.png" 
             alt="" 
           />
