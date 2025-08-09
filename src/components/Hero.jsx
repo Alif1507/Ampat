@@ -14,6 +14,7 @@ function Hero() {
       ease: "expo.out",
       stagger: 0.05,
       opacity: 0,
+      delay: 5
     })
 
     gsap.from(paragrafSplit.lines, {
@@ -21,7 +22,7 @@ function Hero() {
       duration: 2,
       ease: "expo.out",
       stagger: 0.05,
-      delay: 0.8,
+      delay: 5.8,
       opacity: 0,
     })
 
@@ -54,14 +55,17 @@ function Hero() {
           punya cerita, suara, dan perjuangan yang <br className="hidden md:block" />
           harus didengar.
         </h1>
-        <button className="group z-20 bg-[#05668D] max-w-full md:max-w-[240px] h-12 rounded-lg font-inter font-bold text-lg md:text-xl transition duration-300 hover:text-[#05668D] hover:bg-white relative mt-4 md:mt-0">
-          Lihat Fakta dan Aksi
-          <img
-            className="absolute z-20 -right-8 md:-right-40 -top-2 md:top-10 pointer-events-none w-10 md:w-auto hidden md:block"
-            src="/gambar/assetHero2.png"
-            alt="Assethero2"
-          />
-        </button>
+     <a href="#about" className="block w-full md:max-w-[240px]">
+  <button className="group z-20 bg-[#05668D] w-full h-12 rounded-lg font-inter font-bold text-lg md:text-xl transition duration-300 hover:text-[#05668D] hover:bg-white relative mt-4 md:mt-0">
+    Lihat Fakta dan Aksi
+    <img
+      className="absolute z-20 -right-8 md:-right-40 -top-2 md:top-10 pointer-events-none w-10 md:w-auto hidden md:block"
+      src="/gambar/assetHero2.png"
+      alt="Assethero2"
+    />
+  </button>
+</a>
+
       </div>
     </section>
   )

@@ -16,12 +16,14 @@ import Solusi from "./components/Solusi";
 import Footer from "./components/Footer";
 import CobaQuiz from "./components/CobaQuiz";
 import Sidebar from "./components/Sidebar";
+import Opening from "./components/Opening";
 
 gsap.registerPlugin(useGSAP,ScrollTrigger,SplitText);
 
 const Landing = () => {
   return (
     <main className=" bg-[#F5F5DC] relative">
+      <Opening />
       <Navbar />
       <Sidebar />
       <Hero />
