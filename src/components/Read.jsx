@@ -43,9 +43,11 @@ const Read = () => {
             <p className="text-xs md:text-sm lg:text-base mt-1 font-light">
                 Jelajahi Papua lebih dalam banyak hal yang menarik, baca sekarang
             </p>
-            <button className="mt-3 bg-[#05668D] py-1 md:py-1.5 px-2 md:px-3 text-xs md:text-sm lg:text-base rounded-xl">
-                Baca Sekarang
-            </button>
+            <a href="https://id.wikipedia.org/wiki/Papua"  target="_blank">
+                <button className="mt-3 bg-[#05668D] py-1 md:py-1.5 px-2 md:px-3 text-xs md:text-sm lg:text-base rounded-xl cursor-pointer">
+                    Baca Sekarang
+                </button>
+            </a>
             </div>
         </div>
 
@@ -56,9 +58,11 @@ const Read = () => {
             <p className="text-xs md:text-sm lg:text-base mt-1 font-light">
                 Penasaran Apa yang membuat raja Ampat begitu special? baca sekarang
             </p>
-            <button className="mt-3 bg-[#05668D] py-1 md:py-1.5 px-2 md:px-3 text-xs md:text-sm lg:text-base rounded-xl">
-                Baca Sekarang
-            </button>
+            <a href="https://www.oceanicsociety.org/travel-ideas/9-reasons-why-raja-ampat-belongs-on-every-nature-lovers-bucket-list/"  target="_blank">
+                <button className="mt-3 bg-[#05668D] py-1 md:py-1.5 px-2 md:px-3 text-xs md:text-sm lg:text-base rounded-xl cursor-pointer">
+                    Baca Sekarang
+                </button>
+            </a>
             </div>
         </div>
 
@@ -69,9 +73,11 @@ const Read = () => {
             <p className="text-xs md:text-sm lg:text-base mt-1 font-light">
                 Papua Memiliki banyak destinasi yang memukai, baca sekarang
             </p>
-            <button className="mt-3 bg-[#05668D] py-1 md:py-1.5 px-2 md:px-3 text-xs md:text-sm lg:text-base rounded-xl">
-                Baca Sekarang
-            </button>
+            <a href="https://papua-diving.com/"  target="_blank">
+                <button className="mt-3 bg-[#05668D] py-1 md:py-1.5 px-2 md:px-3 text-xs md:text-sm lg:text-base rounded-xl cursor-pointer">
+                    Baca Sekarang
+                </button>
+            </a>
             </div>
         </div>
         </motion.div>
@@ -87,25 +93,40 @@ const Read = () => {
            <div>
               <div className='relative transition-all hover:rotate-8 duration-500'>
                 <img className='object-cover w-50' src="/gambar/gambar-tengah.png" alt="" />
-                <div className='absolute bottom-0 ml-1 w-49 h-30 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-6 py-5 text-white rounded-b-2xl items-center'>
+                <div className='absolute bottom-0 ml-[2px] w-49 h-32 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-6 py-3 text-white rounded-b-2xl items-center'>
                     <h1 className='text-[12px] font-semibold'>Whats Make Raja Ampat Special</h1>
                     <p className='text-[10px] font-light'>Penasaran Apa yang membuat raja Ampat begitu special? baca sekarang</p>
+                     <a href="https://www.oceanicsociety.org/travel-ideas/9-reasons-why-raja-ampat-belongs-on-every-nature-lovers-bucket-list/"  target="_blank">
+                        <button className=" bg-[#05668D]  py-1 md:py-1.5 px-2 md:px-3 text-[8px] md:text-sm lg:text-base rounded-lg cursor-pointer ">
+                            Baca Sekarang
+                        </button>
+                    </a>
                 </div>
             </div>
            </div>
            <div className='flex gap-10'>
              <div className='relative transition-all hover:rotate-8 duration-500'>
                 <img className='object-cover w-40' src="/gambar/gambar-kiri.png" alt="" />
-                <div className='absolute bottom-0 w-40 h-25 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-6 py-5 text-white rounded-b-xl '>
+                <div className='absolute bottom-0 w-40 h-27 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-6 py-3 text-white rounded-b-xl '>
                     <h1 className='text-[12px] font-semibold'>About Papua</h1>
                     <p className='text-[9px]  font-light'>Jelajahi Papua lebih dalam banyak hal yang menarik, baca sekarang</p>
+                    <a href="https://id.wikipedia.org/wiki/Papua"  target="_blank">
+                        <button className=" bg-[#05668D] mt-2 py-1 md:py-1.5 px-2 md:px-3 text-[8px] md:text-sm lg:text-base rounded-lg cursor-pointer ">
+                            Baca Sekarang
+                        </button>
+                    </a>
                 </div>
             </div>
            <div className='relative transition-all hover:rotate-8 duration-500'>
                 <img className='object-cover w-40' src="/gambar/gambar-kanan.png" alt="" />
-                <div className='absolute bottom-0 w-40 h-25 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-6 py-5 text-white rounded-b-xl'>
+                <div className='absolute bottom-0 w-40 h-28 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-6 py-3 text-white rounded-b-xl'>
                     <h1 className='text-[12px] font-semibold'>Destination In Papua</h1>
-                    <p className='text-[9px] font-light'>Papua Memiliki banyak destinasi yang memukai, baca sekarang</p>
+                    <p className='text-[9px] w-[130px] font-light'>Papua Memiliki banyak destinasi yang memukai, baca sekarang</p>
+                     <a href="https://papua-diving.com/"  target="_blank">
+                        <button className=" bg-[#05668D] py-1 md:py-1.5 px-2 md:px-3 text-[8px] md:text-sm lg:text-base rounded-lg cursor-pointer ">
+                            Baca Sekarang
+                        </button>
+                    </a>
                 </div>
             </div>
            </div>
