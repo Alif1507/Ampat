@@ -57,7 +57,7 @@ function Hero() {
         <button className="group z-20 bg-[#05668D] max-w-full md:max-w-[240px] h-12 rounded-lg font-inter font-bold text-lg md:text-xl transition duration-300 hover:text-[#05668D] hover:bg-white relative mt-4 md:mt-0">
           Lihat Fakta dan Aksi
           <img
-            className="absolute z-20 -right-8 md:-right-40 -top-2 md:top-10 pointer-events-none w-10 md:w-auto"
+            className="absolute z-20 -right-8 md:-right-40 -top-2 md:top-10 pointer-events-none w-10 md:w-auto hidden md:block"
             src="/gambar/assetHero2.png"
             alt="Assethero2"
           />
