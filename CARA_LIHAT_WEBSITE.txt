@@ -1,0 +1,15 @@
+1. Install Node.js LTS dari nodejs.org (klik Next sampai selesai).
+
+2. Buka Folder proyek (yang ada package.json) → klik kanan → Open in Terminal.
+
+3. Jalankan:
+
+    npm install → mengunduh modul yang dibutuhkan.
+
+    Lalu :
+
+        npm run dev → lihat alamat (seringnya http://localhost:5173).
+
+ATAU
+
+click link ini https://ampat.vercel.app/
