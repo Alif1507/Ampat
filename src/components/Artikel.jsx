@@ -1,6 +1,12 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { motion } from 'framer-motion';
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+};
 
 const Artikel = () => {
   const images = [
@@ -33,12 +39,24 @@ const Artikel = () => {
 
   return (
     <div className="mt-20 px-4 md:px-12">
-      <div className="flex flex-col relative items-center text-white">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className="flex flex-col relative items-center text-white"
+      >
         <h1 className="text-4xl font-medium max-md:text-black hero-title">Artikel</h1>
         <img src="/gambar/garis-putih.png" alt="garis" className="mt-2" />
-      </div>
+      </motion.div>
 
-      <div className="mt-12 flex justify-center items-center">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className="mt-12 flex justify-center items-center"
+      >
         <Swiper
           spaceBetween={20}
           slidesPerView={1.1}
@@ -50,7 +68,14 @@ const Artikel = () => {
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
-              <div className="relative rounded-xl overflow-hidden group w-full max-w-xs md:max-w-sm mx-auto">
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ delay: 0.06 * (index % 3) }} // subtle stagger per row
+                className="relative rounded-xl overflow-hidden group w-full max-w-xs md:max-w-sm mx-auto"
+              >
                 <div>
                   <img
                     src={img.src}
@@ -64,11 +89,11 @@ const Artikel = () => {
                   <div className="absolute bg-white w-[87px] h-[134px] right-0 rounded-tl-2xl rounded-br-2xl -bottom-10"></div>
                   <div className="absolute bg-white w-[87px] h-[134px] right-30 rounded-tl-3xl rounded-br-3xl -bottom-10"></div>
                 </div>
-              </div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </motion.div>
     </div>
   );
 };

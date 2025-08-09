@@ -1,12 +1,32 @@
+import React from 'react'
+import { motion } from 'framer-motion'
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+}
+
 const Isu = () => {
   return (
     <div className='relative mt-30'>
-      <div className='flex flex-col justify-center items-center'>
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className='flex flex-col justify-center items-center'
+      >
         <h1 className='flex text-center hero-title text-4xl font-medium text-white justify-center max-md:text-black'>Isu Saat Ini</h1>
         <img src="/gambar/garis-putih.png" alt="" />
-      </div>
+      </motion.div>
 
-      <div className='mx-14 flex justify-center  gap-5 max-md:hidden'>
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className='mx-14 flex justify-center  gap-5 max-md:hidden'
+      >
         <div className='bg-[#F5F5DC] group relative mt-10 w-[870px] hover:bg-[#ffffff] hover:shadow-2xl transition duration-300 overflow-hidden'>
           <img className='absolute -bottom-20 -right-15 -rotate-45 group-hover:rotate-20 transition duration-300 ' src="/gambar/daun.png" alt="" />
           <img className='absolute top-0 left-0' src="/gambar/petik.png" alt="sasasa" />
@@ -32,9 +52,15 @@ const Isu = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className='mx-14 flex gap-5 justify-center max-md:hidden'>
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className='mx-14 flex gap-5 justify-center max-md:hidden'
+      >
          <div className='bg-[#F5F5DC] mt-5 w-[560px] relative overflow-hidden group hover:bg-[#ffffff] hover:shadow-2xl transition duration-300'>
           <img className='absolute -bottom-20 -right-15 -rotate-45 group-hover:rotate-20 transition duration-300' src="/gambar/daun.png" alt="" />
           <h1 className='text-xl font-semibold text-shadow-lg py-4 ml-12'>Disinformasi & Kontroversi Digital</h1>
@@ -59,10 +85,15 @@ const Isu = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mx-4 md:mx-14 mt-8 md:mt-10 md:hidden'>
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className='grid grid-cols-1 md:grid-cols-2 gap-6 mx-4 md:mx-14 mt-8 md:mt-10 md:hidden'
+      >
         <div className='bg-blue-400 rounded-2xl group relative hover:bg-[#ffffff] hover:shadow-2xl transition duration-300 overflow-hidden'>
           <img className='absolute -bottom-10 -right-10 -rotate-45 group-hover:rotate-20 transition duration-300 w-24 md:w-32' src="/gambar/daun.png" alt="" />
           <img className='absolute top-0 left-0 w-6 md:w-8' src="/gambar/petik.png" alt="sasasa" />
@@ -88,9 +119,15 @@ const Isu = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mx-4 md:mx-14 mt-6 md:mt-5 md:hidden'>
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className='grid grid-cols-1 md:grid-cols-2 gap-6 mx-4 md:mx-14 mt-6 md:mt-5 md:hidden'
+      >
         <div className='bg-blue-400 rounded-2xl w-full md:w-[560px] relative overflow-hidden group hover:bg-[#ffffff] hover:shadow-2xl transition duration-300'>
           <img className='absolute -bottom-10 -right-10 -rotate-45 group-hover:rotate-20 transition duration-300 w-24 md:w-32' src="/gambar/daun.png" alt="" />
           <h1 className='text-lg md:text-xl font-semibold py-2 md:py-4 ml-4 md:ml-12 '>Disinformasi & Kontroversi Digital</h1>
@@ -115,7 +152,7 @@ const Isu = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

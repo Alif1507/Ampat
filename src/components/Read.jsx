@@ -1,13 +1,27 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+}
 
 const Read = () => {
   return (
     <div className='' id='read'>
-        <div className='flex flex-col justify-center items-center'>
+        {/* Title */}
+        <motion.div 
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className='flex flex-col justify-center items-center'
+        >
             <h1 className='hero-title text-4xl pt-20 mb-1 font-medium'>Read</h1>
             <img src="/gambar/garis1.png" alt="" />
-        </div> 
+        </motion.div> 
 
+        {/* Background */}
         <div className='relative'>
             <img className='absolute w-full max-md:hidden top-64 z-0' src="/gambar/Ellipse 1.png" alt="" />
             <img className='absolute md:hidden top-64 z-0' src="/gambar/Ellipse 1.png" alt="" />
@@ -15,7 +29,13 @@ const Read = () => {
         </div>
        
         {/* desktop */}
-       <div className="flex justify-center items-center gap-10 lg:gap-20 mt-10 max-md:hidden">
+       <motion.div 
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="flex justify-center items-center gap-10 lg:gap-20 mt-10 max-md:hidden"
+        >
         <div className="relative transition-all hover:rotate-8 duration-500 max-w-[286px] w-full">
             <img className="object-cover w-full rounded-xl" src="/gambar/gambar-kiri.png" alt="" />
             <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-4 py-4 text-white rounded-b-xl">
@@ -54,13 +74,16 @@ const Read = () => {
             </button>
             </div>
         </div>
-        </div>
-
-
+        </motion.div>
 
         {/* mobile */}
-
-        <div className='flex flex-col justify-center items-center gap-20 mt-10 md:hidden'>
+        <motion.div 
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className='flex flex-col justify-center items-center gap-20 mt-10 md:hidden'
+        >
            <div>
               <div className='relative transition-all hover:rotate-8 duration-500'>
                 <img className='object-cover w-50' src="/gambar/gambar-tengah.png" alt="" />
@@ -71,7 +94,6 @@ const Read = () => {
             </div>
            </div>
            <div className='flex gap-10'>
-            
              <div className='relative transition-all hover:rotate-8 duration-500'>
                 <img className='object-cover w-40' src="/gambar/gambar-kiri.png" alt="" />
                 <div className='absolute bottom-0 w-40 h-25 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[3px] px-6 py-5 text-white rounded-b-xl '>
@@ -87,17 +109,9 @@ const Read = () => {
                 </div>
             </div>
            </div>
-        </div>
+        </motion.div>
     </div>
   )
 }
 
 export default Read
-
-
-
-
-            
-
-
-           
