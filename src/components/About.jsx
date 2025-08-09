@@ -74,7 +74,7 @@ const About = () => {
             <img
               src="/gambar/gbBesar.png"
               alt="Panorama Raja Ampat"
-              className="w-full h-auto rounded-xl object-cover shadow-lg"
+              className="w-full h-auto rounded-xl object-cover"
               loading="lazy"
             />
           </div>
@@ -91,7 +91,7 @@ const About = () => {
             <img
               src="/gambar/gbKecil.png"
               alt="Detail pulau Raja Ampat"
-              className="w-full h-auto rounded-xl object-cover shadow-md"
+              className="w-full h-auto rounded-xl object-cover "
               loading="lazy"
             />
           </div>
