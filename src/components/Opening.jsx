@@ -8,7 +8,7 @@ const Opening = () => {
       }}
 
       transition={{ duration: 1.4, ease: "easeOut", delay: 3.7 }}
-      className="fixed w-full h-full bg-white z-500"
+      className="fixed w-full h-full bg-[#F5F5DC] z-500"
     >
       <motion.div
         animate={{
@@ -26,7 +26,7 @@ const Opening = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.4, delay: 2, ease: "backInOut" }}
       >
-        <h1 className="font-playfair-display text-7xl text-[#011C27]">AMPAT</h1>
+        <h1 className="font-playfair-display md:text-7xl text-3xl text-[#011C27]">AMPAT</h1>
       </motion.div>
     </motion.div>
   );
